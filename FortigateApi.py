@@ -921,7 +921,7 @@ class Fortigate:
                     'name': name
                     }
                 }
-        return self.ApiDelete('cmdb/firewall/address/', data=payload)
+        return self.ApiDelete('cmdb/firewall/address/' + 'name' + '/', data=payload)
 
     def DelAllFwAddress(self):
         """
@@ -1048,7 +1048,7 @@ class Fortigate:
                     'name': name
                     }     
                 }
-        return self.ApiDelete('cmdb/firewall/addrgrp/', payload)
+        return self.ApiDelete('cmdb/firewall/addrgrp/' + name + '/', payload)
     
     def DelAllFwAddressGroup(self):
         """
